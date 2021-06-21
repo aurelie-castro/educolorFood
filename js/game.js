@@ -116,16 +116,16 @@ function preload ()
     
     
     //---backgrounds---
-    this.load.image('bg', 'assets/animal1.jpg');
-    this.load.image('bg2', 'assets/animal2.jpg');
-    this.load.image('bg3', 'assets/animal3.jpg');
-    this.load.image('bg4', 'assets/animal4.jpg');
-    this.load.image('bg5', 'assets/animal5.jpg');
-    this.load.image('bg6', 'assets/animal6.jpg');
-    this.load.image('bg7', 'assets/animal7.jpg');
-    this.load.image('bg8', 'assets/animal8.jpg');
-    this.load.image('bg9', 'assets/animal9.jpg');
-    this.load.image('bg10', 'assets/animal10.jpg');
+    this.load.image('bg', 'assets/home1.jpg');
+    this.load.image('bg2', 'assets/home2.jpg');
+    this.load.image('bg3', 'assets/home3.jpg');
+    this.load.image('bg4', 'assets/home4.jpg');
+    this.load.image('bg5', 'assets/home5.jpg');
+    this.load.image('bg6', 'assets/home6.jpg');
+    this.load.image('bg7', 'assets/home7.jpg');
+    this.load.image('bg8', 'assets/home8.jpg');
+    this.load.image('bg9', 'assets/home9.jpg');
+//   this.load.image('bg10', 'assets/animal10.jpg');
 //    this.load.image('bg11', 'assets/p5-2.jpeg');
 //    this.load.image('bg12', 'assets/p5-3.jpeg');
 //    this.load.image('bg13', 'assets/p6-1.jpeg');
@@ -187,12 +187,12 @@ function create ()
     bg9 = this.add.image(180, 315, 'bg9');
     bg9.setVisible(false);
     
-    bg10 = this.add.image(180, 315, 'bg10');
-    bg10.setVisible(false);
+    //bg10 = this.add.image(180, 315, 'bg10');
+    //bg10.setVisible(false);
     
     //draws a random number from which
     //to pick a bg image at every reload
-    var value = Phaser.Math.Between(1, 10);
+    var value = Phaser.Math.Between(1, 9);
     
     if(value === 1){
             bg.setVisible(true);
