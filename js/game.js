@@ -74,7 +74,7 @@ console.warn = () => {};
 function preload ()
 {
     //image de cover (educolor) avec le bouton start    
-    var bgImage = this.load.image('testEdu', 'assets/Cover-01.jpg');
+    var bgImage = this.load.image('testEdu', 'assets/CoverHome.jpg');
     
     //--------brushes-------
     //white
@@ -127,21 +127,9 @@ function preload ()
     this.load.image('bg7', 'assets/home7.jpg');
     this.load.image('bg8', 'assets/home8.jpg');
     this.load.image('bg9', 'assets/home9.jpg');
-//   this.load.image('bg10', 'assets/animal10.jpg');
-//    this.load.image('bg11', 'assets/p5-2.jpeg');
-//    this.load.image('bg12', 'assets/p5-3.jpeg');
-//    this.load.image('bg13', 'assets/p6-1.jpeg');
-//    this.load.image('bg14', 'assets/p6-2.jpeg');
-//    this.load.image('bg15', 'assets/p6-3.jpeg');
-//    this.load.image('bg16', 'assets/p7-1.jpeg');
-//    this.load.image('bg17', 'assets/p7-2.jpeg');
     
     //-----rangées de cercles-----------
     this.load.image('colorPalette', 'assets/couleurs-version3.png');
-    
-    
-//    this.load.audio('testAudio', 'assets/airport.wav');
-    
 }
 
 function create ()
@@ -230,7 +218,6 @@ function create ()
     }
     
     if(dessinFini === "9"){
-//        localStorage.clear();
         //clears the storage for the cover
         sessionStorage.clear();
         //resets the counter to 0 to restart
@@ -252,11 +239,9 @@ function create ()
     erasingColors = false;
     
     gameStarted = sessionStorage.getItem("start clicked");
-//    console.log("has start been clicked ? " + gameStarted);
     if (gameStarted === "yes"){
         bgImage.setVisible(false);
     }
-//    console.log(value +" is the value for the bg image");
     
     //----------------interaction des brush = dessin---------------------------
     
@@ -451,13 +436,7 @@ function create ()
                 
             }
             
-        }
-//        else if(pointer.x > 8 && pointer.y > 540){
-//            console.log("stoooop");
-//            
-//        }
-        
-        
+        }        
 
     }, this);
     
@@ -466,14 +445,10 @@ function create ()
 
     //-----------------changement de couleur----------------------
     //quand l'user clique sur un des cercles pour choisir la couleur de sa brush
-    this.input.on('pointerdown', function(pointer){
-//        console.log(pointer.x);
-//        console.log(pointer.y);
-    
+    this.input.on('pointerdown', function(pointer){    
         
         if(pointer.x >= 134 && pointer.x <= 164  && pointer.y >= 21 && pointer.y <=49){
             //couleur choisie
-//            console.log('cliqué sur le yellow');
             yellowColor = true;
             
             //couleurs desactivées
