@@ -447,6 +447,9 @@ function create ()
     //quand l'user clique sur un des cercles pour choisir la couleur de sa brush
     this.input.on('pointerdown', function(pointer){    
         
+        console.log(pointer.x);
+        console.log(pointer.y);
+        
         if(pointer.x >= 134 && pointer.x <= 164  && pointer.y >= 21 && pointer.y <=49){
             //couleur choisie
             yellowColor = true;
@@ -682,7 +685,7 @@ function create ()
         }
         
         //interaction si clic sur le btn play du start
-         if(pointer.x >= 44 && pointer.x <= 157  && pointer.y >= 383 && pointer.y <=497){
+         if(pointer.x >= 69 && pointer.x <= 168  && pointer.y >= 375 && pointer.y <=476){
 //             console.log("cliqué sur start");
              bgImage.setVisible(false);
              startClicked = true;
